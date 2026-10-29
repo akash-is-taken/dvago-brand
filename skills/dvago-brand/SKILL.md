@@ -106,7 +106,7 @@ The logo is all round terminals and soft curves. Match it:
 
 Render it (screenshot or image per the format skill) and check:
 - Logo variant matches its background, not stretched, has clear space, tagline readable or mark used instead
-- No green or yellow text on white; buttons are Deep Green with white text
+- No bright green `#76BC21` or yellow text on white (green text uses Deep Green or Forest); buttons are Deep Green with white text
 - Heart-V motif used at least once as the signature element
 - Only green and yellow as hues; no campaign or random colors
 - Rounded corners, title-case labels, sentence-case copy

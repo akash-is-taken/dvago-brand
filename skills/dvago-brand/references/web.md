@@ -66,7 +66,7 @@ Dvago is e-commerce first. Common surfaces and how to brand them:
 
 - [ ] `tokens.css` or preset in use; no stray brand hex in components
 - [ ] Inter loaded from the bundled `fonts/` folder (no Google Fonts in deployed apps), with fallbacks
-- [ ] No white text on `#76BC21`, no green or yellow text on white
+- [ ] No white text on `#76BC21`, no bright green `#76BC21` or yellow text on white (green text uses Deep Green or Forest)
 - [ ] Focus rings visible on light and dark sections
 - [ ] Correct logo variant per background, aspect ratio kept, alt text
 - [ ] Heart-V used as signature element
