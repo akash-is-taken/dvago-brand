@@ -71,7 +71,7 @@ Charts: Dvago Green, Charcoal, Green Light, `#5B5B5B`, then `#E8ECF2`. Use yello
 
 ## Typography
 
-- **Web, HTML, PDFs built from HTML, images:** Inter (Google Fonts). Headings 700 (600 for smaller headings), body 400.
+- **Web, HTML, PDFs built from HTML, images:** Inter, bundled in `assets/fonts/InterVariable.woff2` (load it locally; `tokens.css` already does). Headings 700 (600 for smaller headings), body 400.
 - **Word, PowerPoint, Excel:** Arial for headings (bold) and body. Inter is usually not installed on the reader's machine, and a missing font silently falls back and breaks the layout. Use Inter in Office files only if the user confirms it is installed or embedded.
 - **Urdu text:** Noto Nastaliq Urdu (web) or the format's default Urdu-capable font. Roman Urdu (e.g. "Aap ki Sehat") uses the Latin fonts above.
 

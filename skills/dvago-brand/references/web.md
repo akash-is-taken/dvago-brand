@@ -4,17 +4,17 @@ Read this when building a website, web app, landing page, dashboard, HTML artifa
 
 ## Ship the tokens, not hex strings
 
-Copy `assets/tokens.css` (and `assets/dvago-mark.svg`, which `.dv-heart` references) into the project and import it once. Components read `var(--dv-*)`. Don't paste raw brand hex into components. Wrap dark sections in `.dv-dark` and colors flip automatically.
+Copy `assets/tokens.css`, the `assets/fonts/` folder, and `assets/dvago-mark.svg` (which `.dv-heart` references) into the project, keeping them side by side, and import `tokens.css` once. Components read `var(--dv-*)`. Don't paste raw brand hex into components. Wrap dark sections in `.dv-dark` and colors flip automatically.
 
 Ready classes: `.dv-btn`, `.dv-btn--ghost`, `.dv-card`, `.dv-callout`, `.dv-badge`, `.dv-heart`.
 
-Single-file HTML artifacts: inline the `:root` block and any classes you use in a `<style>` tag. Inline the mark SVG directly (`<svg>…</svg>`) instead of the mask URL, since the artifact can't load sibling files.
+Single-file HTML artifacts: inline the `:root` block and any classes you use in a `<style>` tag. Inline the mark SVG directly (`<svg>…</svg>`) instead of the mask URL, and load Inter from Google Fonts (`<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">`), since a single file can't load the sibling font. Use this only for one-off artifacts, never in deployed apps.
 
 Tailwind v3: add `assets/tailwind.preset.js` to `presets`. Use `bg-green`, `bg-green-deep`, `text-green-forest`, `bg-green-tint`, `text-charcoal`, `bg-charcoal-deep`, `bg-sun`, `rounded-card`, `shadow-card`. Tailwind v4: paste the `:root` values into an `@theme` block.
 
 ## Fonts
 
-Inter from Google Fonts (`tokens.css` imports it). Stack: `"Inter", "Segoe UI", system-ui, -apple-system, Arial, sans-serif`. For Urdu add `Noto Nastaliq Urdu` and set `dir="rtl"` on Urdu blocks; Nastaliq needs extra line height (about 2).
+Inter is bundled as `assets/fonts/InterVariable.woff2` (one variable file, weights 100–900, SIL Open Font License in `Inter-OFL.txt`). `tokens.css` loads it with `@font-face` from `fonts/` next to it, so apps make no external font requests and work offline. Ship `Inter-OFL.txt` with the font. Stack: `"Inter", "Segoe UI", system-ui, -apple-system, Arial, sans-serif`. For Urdu add `Noto Nastaliq Urdu` and set `dir="rtl"` on Urdu blocks; Nastaliq needs extra line height (about 2).
 
 ## Color rules
 
@@ -60,7 +60,7 @@ Dvago is e-commerce first. Common surfaces and how to brand them:
 ## Checklist
 
 - [ ] `tokens.css` or preset in use; no stray brand hex in components
-- [ ] Inter loaded with fallbacks
+- [ ] Inter loaded from the bundled `fonts/` folder (no Google Fonts in deployed apps), with fallbacks
 - [ ] No white text on `#76BC21`, no green or yellow text on white
 - [ ] Focus rings visible on light and dark sections
 - [ ] Correct logo variant per background, aspect ratio kept, alt text
