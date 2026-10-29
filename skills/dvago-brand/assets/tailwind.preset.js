@@ -9,7 +9,8 @@ module.exports = {
         muted: "#5B5B5B",
         line: "#E8ECF2",
         warning: "#ED8D20",
-        error: "#CB4B4B",
+        error: { DEFAULT: "#CB4B4B", tint: "#FBEDED" },
+        input: "#8A918D",
       },
       fontFamily: {
         sans: ["Inter", "Segoe UI", "system-ui", "-apple-system", "Arial", "sans-serif"],

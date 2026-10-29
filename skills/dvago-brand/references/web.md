@@ -10,7 +10,7 @@ Ready classes: `.dv-btn`, `.dv-btn--ghost`, `.dv-card`, `.dv-callout`, `.dv-badg
 
 Single-file HTML artifacts: inline the `:root` block and any classes you use in a `<style>` tag. Inline the mark SVG directly (`<svg>…</svg>`) instead of the mask URL, and load Inter from Google Fonts (`<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">`), since a single file can't load the sibling font. Use this only for one-off artifacts, never in deployed apps.
 
-Tailwind v3: add `assets/tailwind.preset.js` to `presets`. Use `bg-green`, `bg-green-deep`, `text-green-forest`, `bg-green-tint`, `text-charcoal`, `bg-charcoal-deep`, `bg-sun`, `rounded-card`, `shadow-card`. Tailwind v4: paste the `:root` values into an `@theme` block.
+Tailwind v3: add `assets/tailwind.preset.js` to `presets`. Use `bg-error-tint`, `border-input`, `bg-green`, `bg-green-deep`, `text-green-forest`, `bg-green-tint`, `text-charcoal`, `bg-charcoal-deep`, `bg-sun`, `rounded-card`, `shadow-card`. Tailwind v4: paste the `:root` values into an `@theme` block.
 
 ## Fonts
 
@@ -23,6 +23,8 @@ Inter is bundled as `assets/fonts/InterVariable.woff2` (one variable file, weigh
 - Links: Deep Green with underline on light; Dvago Green on `.dv-dark`.
 - Yellow `#F2E31B`: offer and sale badges, one highlighted stat. Charcoal text on it.
 - Body text Charcoal `#303733`. Muted text `#5B5B5B`.
+- Form fields: 1px `var(--dv-input-border)` border, Deep Green focus ring.
+- Error alerts (login failures, the SSO-failed message, form errors): `var(--dv-error-tint)` background, Charcoal text, `var(--dv-error)` left border or icon. Never use `--dv-error` as the text color on the tint (4.0:1 fails AA).
 
 ## Contrast (WCAG AA)
 
@@ -38,6 +40,9 @@ Inter is bundled as `assets/fonts/InterVariable.woff2` (one variable file, weigh
 | `#76BC21` on `#303733` | 5.2:1 | Pass |
 | `#303733` on `#F2E31B` | 9.2:1 | Pass |
 | `#5B5B5B` on `#FFFFFF` | 6.8:1 | Pass |
+| `#303733` on `#FBEDED` | 10.7:1 | Pass (error alert text) |
+| `#CB4B4B` on `#FBEDED` | 4.0:1 | Fail for normal text. Border/icon only |
+| `#8A918D` on `#FFFFFF` | 3.2:1 | Pass for input borders (3:1 non-text) |
 
 ## Logo
 

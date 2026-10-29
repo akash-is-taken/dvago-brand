@@ -28,7 +28,9 @@
   /* Status */
   --dv-success: var(--dv-green-deep);
   --dv-warning: #ED8D20;
-  --dv-error: #CB4B4B;
+  --dv-error: #CB4B4B;        /* border/icon only; fails AA as text on the tint */
+  --dv-error-tint: #FBEDED;   /* error alert background, charcoal text (10.7:1) */
+  --dv-input-border: #8A918D; /* form field borders (3.2:1 on white, 3.8:1 on charcoal) */
 
   /* Semantic */
   --dv-bg: var(--dv-white);
@@ -60,6 +62,7 @@
   --dv-link: var(--dv-green);
   --dv-focus: var(--dv-green);
   --dv-border: #46504A;
+  --dv-error-tint: #3A2A2A;   /* white text on it */
   background: var(--dv-bg);
   color: var(--dv-text);
 }
