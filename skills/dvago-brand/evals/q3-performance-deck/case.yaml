@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: q3-performance-deck
+expected_outcome: |
+  A 6-slide .pptx in Dvago branding: Dvago logo on the title slide, green and charcoal palette, Arial type, all given figures shown correctly, varied layouts, no invented data.

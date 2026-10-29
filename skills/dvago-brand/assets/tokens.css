@@ -1,0 +1,90 @@
+/* Dvago brand tokens. Import once at the app root; components use var(--dv-*). */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  /* Core */
+  --dv-green: #76BC21;        /* logo, motif, fills, chart 1. Not text on white */
+  --dv-green-deep: #4E7D17;   /* buttons, links, active (white text 4.9:1) */
+  --dv-green-forest: #3F6614; /* green text on white/tints (6.7:1) */
+  --dv-charcoal: #303733;     /* body text, dark surfaces */
+
+  /* Supporting */
+  --dv-charcoal-deep: #1F2622;
+  --dv-green-tint: #EEF7E1;
+  --dv-green-light: #D6EDB8;
+  --dv-yellow: #F2E31B;       /* spark only, charcoal text on it */
+  --dv-muted: #5B5B5B;
+  --dv-white: #FFFFFF;
+  --dv-gray-50: #F3F3F3;
+  --dv-border: #E8ECF2;
+
+  /* Status */
+  --dv-success: var(--dv-green-deep);
+  --dv-warning: #ED8D20;
+  --dv-error: #CB4B4B;
+
+  /* Semantic */
+  --dv-bg: var(--dv-white);
+  --dv-surface: var(--dv-white);
+  --dv-text: var(--dv-charcoal);
+  --dv-text-muted: var(--dv-muted);
+  --dv-heading: var(--dv-charcoal);
+  --dv-link: var(--dv-green-deep);
+  --dv-focus: var(--dv-green-deep);
+
+  /* Type */
+  --dv-font: "Inter", "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  --dv-font-urdu: "Noto Nastaliq Urdu", serif;
+
+  /* Shape */
+  --dv-radius-sm: 8px;
+  --dv-radius: 12px;
+  --dv-radius-pill: 999px;
+  --dv-shadow: 0 2px 8px rgba(48, 55, 51, 0.08);
+}
+
+/* Dark sections: wrap in .dv-dark */
+.dv-dark {
+  --dv-bg: var(--dv-charcoal);
+  --dv-surface: var(--dv-charcoal-deep);
+  --dv-text: var(--dv-white);
+  --dv-text-muted: #C9D1CC;
+  --dv-heading: var(--dv-white);
+  --dv-link: var(--dv-green);
+  --dv-focus: var(--dv-green);
+  --dv-border: #46504A;
+  background: var(--dv-bg);
+  color: var(--dv-text);
+}
+
+body {
+  font-family: var(--dv-font);
+  color: var(--dv-text);
+  background: var(--dv-bg);
+  line-height: 1.55;
+}
+
+h1, h2, h3, h4 { color: var(--dv-heading); font-weight: 700; line-height: 1.15; }
+a { color: var(--dv-link); text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--dv-focus); outline-offset: 2px; }
+
+.dv-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 22px; border: 0; border-radius: var(--dv-radius-pill);
+  background: var(--dv-green-deep); color: var(--dv-white);
+  font: 600 15px/1 var(--dv-font); cursor: pointer;
+}
+.dv-btn:hover { background: var(--dv-green-forest); }
+.dv-btn--ghost { background: transparent; color: var(--dv-green-deep); box-shadow: inset 0 0 0 2px var(--dv-green-deep); }
+
+.dv-card { background: var(--dv-surface); border: 1px solid var(--dv-border); border-radius: var(--dv-radius); box-shadow: var(--dv-shadow); }
+.dv-callout { background: var(--dv-green-tint); color: var(--dv-charcoal); border-radius: var(--dv-radius); }
+.dv-badge { display: inline-block; padding: 4px 10px; border-radius: var(--dv-radius-pill); background: var(--dv-yellow); color: var(--dv-charcoal); font-weight: 700; font-size: 13px; }
+
+/* Heart-V motif as a CSS mask; color follows background-color */
+.dv-heart {
+  display: inline-block; width: 1em; height: 0.9em;
+  background-color: var(--dv-green);
+  -webkit-mask: url("dvago-mark.svg") center / contain no-repeat;
+          mask: url("dvago-mark.svg") center / contain no-repeat;
+}

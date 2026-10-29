@@ -1,0 +1,14 @@
+{
+  "name": "dvago-brand",
+  "description": "Unofficial Dvago brand kit skill for Claude.",
+  "owner": {
+    "name": "Akash Kumar"
+  },
+  "plugins": [
+    {
+      "name": "dvago-brand",
+      "source": "./",
+      "description": "Dvago brand kit for Claude: logo, heart-V mark, green palette, Inter type, and layout and tone rules."
+    }
+  ]
+}

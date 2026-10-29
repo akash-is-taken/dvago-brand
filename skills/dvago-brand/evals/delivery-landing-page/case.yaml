@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: delivery-landing-page
+expected_outcome: |
+  A single index.html landing page in Dvago branding: green palette (#76BC21 family) with charcoal text, Inter font, Dvago logo, heart-V motif, accessible buttons, no invented prices or medical claims.
